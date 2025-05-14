@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Clothing"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 14",
+      "price": 999,
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "T-Shirt",
+      "price": 25,
+      "categoryId": 2
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customer": "Ali",
+      "products": [1, 2],
+      "total": 1024
+    }
+  ]
+}
