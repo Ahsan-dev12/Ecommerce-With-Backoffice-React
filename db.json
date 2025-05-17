@@ -9,6 +9,7 @@
       "name": "Clothing"
     }
   ],
+
   "products": [
     {
       "id": 1,
@@ -23,6 +24,7 @@
       "categoryId": 2
     }
   ],
+  
   "orders": [
     {
       "id": 1,

@@ -59,7 +59,7 @@ function Login() {
                         type="text"
                         required
                         placeholder="Enter your email"
-                        className="block w-full bg-transparent border border-gray-400 rounded-[300px] px-5 py-2 my-5 text-xs text-white placeholder-gray-300 focus:outline-none"
+                        className="block w-full bg-transparent border border-gray-400 rounded-[300px] px-5 py-2 my-5  text-white placeholder-gray-300 focus:outline-none"
                     />
                      <input
                         
@@ -69,11 +69,11 @@ function Login() {
                         type="password"
                         required
                         placeholder="Enter your password"
-                        className="block w-full bg-transparent border border-gray-400 rounded-[300px] px-5 py-2 my-1 text-xs text-white placeholder-gray-300 focus:outline-none"
+                        className="block w-full bg-transparent border border-gray-400 rounded-[300px] px-5 py-2 my-1 text-white placeholder-gray-300 focus:outline-none"
                     />
                     
                     <button type="submit"
-                     className="bg-[#F24D2B] text-white text-xs py-2 px-5 my-5 rounded-full w-full">
+                     className="bg-[#F24D2B] text-white py-2 px-5 my-5 rounded-full w-full">
                       Login
                     </button>
                   </form>

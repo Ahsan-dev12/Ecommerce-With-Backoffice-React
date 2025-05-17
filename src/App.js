@@ -4,17 +4,24 @@ import Welcome from './Pages/WelcomePage.js'
 import Home from './Pages/UserPages/Home.js'
 import Dashboard from './Pages/AdminPages/Dashboard.js';
 import Login from './Pages/AdminPages/Login.js';
+import QuantityCards from './ReusableComponent/AdminComp/QuantityCards.js';
+import AddForm from './Pages/AdminPages/AddForm.js';
+
+
+import MainCards from './ReusableComponent/AdminComp/MainCards.js';
 function App() {
   return (
     <>
-      <Routes>
+      {/* <AddForm/> */}
+      {/* <MainCards /> */}
+      {<Routes>
         <Route path="/" element={<Welcome />} />
         <Route path='/home' element={<Home />} />
         <Route path="/login" element={<Login />} />
-
         <Route path="/dashboard" element={<Dashboard />} />
-        
-      </Routes>
+        <Route path="/inputForm" element={<AddForm />} />
+   
+      </Routes>}
     </>
   );
 }
