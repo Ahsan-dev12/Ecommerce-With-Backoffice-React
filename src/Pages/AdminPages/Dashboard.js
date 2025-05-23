@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from "react";
 import QuantityCards from '../../ReusableComponent/AdminComp/QuantityCards'
 import { BiSolidCategoryAlt } from "react-icons/bi";
 import MainCards from '../../ReusableComponent/AdminComp/MainCards';
@@ -9,8 +9,10 @@ import { GoListUnordered } from "react-icons/go";
 import { RiHome4Line } from "react-icons/ri";
 import { MdOutlineDonutSmall } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import { APIsDataContext } from '../../Context/ProviderAPIsData';
 
 function Dashboard() {
+  const {APIcategories, APIproducts} = useContext(APIsDataContext);
   return (
     <div className='flex flex-col px-10 py-5 gap-8 '>
        <div className=''>
@@ -19,8 +21,8 @@ function Dashboard() {
        </div>
 
        <div className='flex justify-between' >
-         <QuantityCards icon={TbCategory} title='Categories' total="Total" value="032"/>
-         <QuantityCards icon={BsCart4} title='Products' total="Total" value="068"/>
+         <QuantityCards icon={TbCategory} title='Categories' total="Total" value={APIcategories.length}/>
+         <QuantityCards icon={BsCart4} title='Products' total="Total" value={APIproducts.length}/>
          <QuantityCards icon={MdOutlineDonutSmall} title='Orders' total="Total" value="012"/>
 
          <QuantityCards icon={BsBorderStyle} title='Producr-list' total="click and view" value="" link="inputForm"/>
@@ -39,7 +41,7 @@ function Dashboard() {
 
        </div>
 
-       <div className='rounded-[10px] py-5 text-xl text-center shadow-lg shadow-[#202020] bg-[#1C1C1C] font-bold text-[#F24D2B] cursor-pointer'>
+       <div className='rounded-[10px] py-5 text-xl text-center shadow-lg shadow-[#202020] bg-[#2E2929] font-bold text-[#F24D2B] cursor-pointer'>
         <Link to='/home'>
          <p>Click and see the User Website </p>
          </Link>

@@ -13,3 +13,18 @@ body{
     background-color:#161313;
     color:white;
 }
+
+.options {
+    background-color:#1C1C1C !important;
+    color: white !important;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.options:hover {
+    background-color: white !important;
+    color:#1C1C1C!important;
+}

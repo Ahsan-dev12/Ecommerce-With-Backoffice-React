@@ -1,52 +1,58 @@
-import React from "react";
+import React, { useContext } from "react";
+import { APIsDataContext } from "../../Context/ProviderAPIsData";
 
 function AddedProductList() {
+  const { APIproducts } = useContext(APIsDataContext);
+
   return (
     <>
-      <div class="relative overflow-x-auto">
-
-        <table class="w-full text-sm text-left rtl:text-right">
-
-          <thead class="text-xs uppercase bg-[#F24D2B]">
+      <div className="font-black text-2xl py-5 text-[#F24D2B]">All Product List</div>
+      <div className="relative overflow-x-auto">
+        <table className="w-full text-sm text-left rtl:text-right ">
+          <thead className="text-sm bg-[#F24D2B] text-white">
             <tr>
-              <th scope="col" class="px-6 py-3 rounded-s-lg">
-                Product name
+              <th scope="col" className="px-6 py-3 rounded-s-lg">
+                Product Name
               </th>
-              <th scope="col" class="px-6 py-3">
-                Qty
+              <th scope="col" className="px-6 py-3">
+                Category
               </th>
-              <th scope="col" class="px-6 py-3 rounded-e-lg">
+              <th scope="col" className="px-6 py-3 rounded-e-lg">
                 Price
               </th>
             </tr>
           </thead>
 
           <tbody>
-            <tr class="shadow-[#202020] bg-[#1C1C1C]">
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                Apple MacBook Pro 17"
-              </th>
-              <td class="px-6 py-4">1</td>
-              <td class="px-6 py-4">$2999</td>
-            </tr>
-           
+            {APIproducts.length > 0 ? (
+              APIproducts.map((product, index) => (
+                <tr key={index} className="bg-[#1C1C1C] text-white border-b border-gray-700">
+                  <td className="px-6 py-4 font-medium whitespace-nowrap">
+                    {product.name}
+                  </td>
+                  <td className="px-6 py-4">{product.categoryName}</td>
+                  <td className="px-6 py-4">Rs. {product.price}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="3" className="text-center py-5 text-gray-500">
+                  No products found.
+                </td>
+              </tr>
+            )}
           </tbody>
 
           <tfoot>
-            <tr class="text-xs uppercase bg-[#F24D2B]">
-              <th scope="row" class="px-6 py-3 text-base">
-                Total
+            <tr className="text-xs bg-[#F24D2B] text-white">
+              <th scope="row" className="px-6 py-3 text-2xl font-bold">
+                Total Products
               </th>
-              <td class="px-6 py-3">3</td>
-              <td class="px-6 py-3">21,000</td>
+              <td className="px-6 py-3"></td>
+              <td className="px-6 py-3 text-2xl font-bold">{APIproducts.length}</td>
             </tr>
           </tfoot>
-
         </table>
-
       </div>
     </>
   );

@@ -1,35 +1,78 @@
 {
   "categories": [
     {
-      "id": 1,
-      "name": "Electronics"
+      "id": "1747659666938",
+      "category": "Electronics"
     },
     {
-      "id": 2,
-      "name": "Clothing"
+      "id": "1747659682232",
+      "category": "Clothing"
+    },
+    {
+      "id": "1747659694782",
+      "category": "Home & Kitchen"
+    },
+    {
+      "id": 1747813442568,
+      "category": "Decoration"
+    },
+    {
+      "id": 1747818748454,
+      "category": "Phone Devices"
     }
   ],
-
   "products": [
     {
-      "id": 1,
-      "name": "iPhone 14",
-      "price": 999,
-      "categoryId": 1
+      "id": "1747659765095",
+      "name": "Wireless Headphones",
+      "price": "59",
+      "categoryName": "Electronics",
+      "des": "Noise-cancelling over-ear headphones with 20-hour battery life."
     },
     {
-      "id": 2,
-      "name": "T-Shirt",
-      "price": 25,
-      "categoryId": 2
+      "id": "1747659823485",
+      "name": "Smart TV",
+      "price": "424",
+      "categoryName": "Electronics",
+      "des": "4K Ultra HD Smart TV with streaming apps and voice control."
+    },
+    {
+      "id": "1747659850500",
+      "name": "Power Bank",
+      "price": "24",
+      "categoryName": "Electronics",
+      "des": "Fast-charging portable battery compatible with all devices."
+    },
+    {
+      "id": "1747659882205",
+      "name": "Cotton T-Shirt",
+      "price": "14",
+      "categoryName": "Clothing",
+      "des": "Soft, breathable fabric with a classic fit. Available in multiple colors."
+    },
+    {
+      "id": "1747659912587",
+      "name": "Denim Jacket",
+      "price": "20",
+      "categoryName": "Clothing",
+      "des": "Stylish, lightweight denim jacket perfect for layering"
+    },
+    {
+      "id": "1747659935578",
+      "name": "Sports Shoes",
+      "price": "39",
+      "categoryName": "Clothing",
+      "des": "Comfortable running shoes with non-slip rubber soles."
     }
   ],
-  
   "orders": [
     {
-      "id": 1,
+      "id": "1",
       "customer": "Ali",
-      "products": [1, 2],
+      "products": [
+        1,
+        2
+      ],
       "total": 1024
     }
   ]
